@@ -1,11 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Post</title>
-</head>
-<body>
-    
-</body>
-</html>
+<% 
+let body = "";
+body += "<h2>Blog Posts</h2>";
+body += "<ul class='post-list'>";
+posts.forEach(post => {
+  body += "<li>";
+  body += "<h3>" + post.title + "</h3>";
+  body += "<p>" + post.content + "</p>";
+  body += "<a href='/posts/" + post.id + "/edit'>Edit</a>";
+  body += "<form action='/posts/" + post.id + "?_method=DELETE' method='post' style='display: inline;'>";
+  body += "<button type='submit'>Delete</button>";
+  body += "</form>";
+  body += "</li>";
+});
+body += "</ul>";
+%>
+
+<%- include("layout.ejs", { body: body }) %>
