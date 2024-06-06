@@ -1,0 +1,130 @@
+/* Basic Reset */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  /* Header Styles */
+  .blog-header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .blog-header .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav-menu ul {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-menu ul li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav-menu ul li a:hover {
+    color: #ff7f50;
+  }
+  
+  .search-bar input {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+  }
+  
+  /* Footer Styles */
+  .blog-footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .blog-footer .footer-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .blog-footer .social-media {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .blog-footer .social-media li a {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s;
+  }
+  
+  .blog-footer .social-media li a:hover {
+    color: #ff7f50;
+  }
+  
+  .footer-right {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer-right ul {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer-right ul li a {
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  .footer-right ul li a:hover {
+    color: #ff7f50;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .nav-menu ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .blog-footer {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .blog-footer .footer-left, .footer-right {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
